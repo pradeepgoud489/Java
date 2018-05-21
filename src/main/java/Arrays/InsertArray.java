@@ -1,13 +1,17 @@
 package Arrays;
 
+import java.util.Vector;
+
 public class InsertArray {
 
     public static void main(String[] args) {
-        int a[]={1,2,3};
+        Vector<Integer> a=new Vector<Integer>();
+        a.add(1);
+        a.add(2);
         for(int b:a){
             System.out.println(b);
         }
-        a[3]=4;
+        a.add(4);
         for(int b:a){
             System.out.println(b);
         }
