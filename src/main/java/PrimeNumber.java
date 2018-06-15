@@ -15,7 +15,7 @@ public class PrimeNumber {
 
     static boolean prime2(int n){
         boolean x=false;
-        for(int j=2;j<=n/2;j++){
+        for(int j=2;j<=Math.sqrt(n);j++){
             if(n%j==0){
                 x= false;
             }else {
@@ -25,6 +25,19 @@ public class PrimeNumber {
         return x;
     }
 
+    static void primeNumbers(int n){
+        for(int i=2;i<=n;i++){
+            int count =0;
+            for(int j=1;j<=i;j++){
+                if(i%j==0){
+                    count++;
+                }
+            }
+            if(count==2){
+                System.out.println("prime"+i);
+            }
+        }
+    }
 
     static boolean prime3(int x){
         for(int m=2;m<Math.sqrt(x);m++){
@@ -35,9 +48,9 @@ public class PrimeNumber {
         return true;
     }
     public static void main(String[] args) {
-       prime(10);
-
-        System.out.println(prime2(10));
-        System.out.println(prime3(23));
+     //  prime(15);
+                    primeNumbers(15);
+//        System.out.println(prime2(10));
+//        System.out.println(prime3(23));
     }
 }

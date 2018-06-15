@@ -11,8 +11,8 @@ public class Permutations {
     private static void findPermutations(String s, String prefix){
         int len=s.length();
         if(len==0){
-            //System.out.print(prefix+" ");
-            list.add(prefix);
+            System.out.print(prefix+" ");
+//            list.add(prefix);
             return;
         }
         for(int i=0;i<len;i++){
@@ -21,23 +21,23 @@ public class Permutations {
     }
     public static void main (String[] args) {
         //code
-        int T;
-        Scanner scanner = new Scanner(System.in);
-        scanner.useDelimiter("\n");
-        T = Integer.parseInt(scanner.next());
-        int count=T;
-        while(T>0){
-            if(T!=count){
-                System.out.println();
-            }
-            String input = scanner.next();
-            findPermutations(input,"");
-            Collections.sort(list);
+//        int T;
+//        Scanner scanner = new Scanner(System.in);
+//        scanner.useDelimiter("\n");
+//        T = Integer.parseInt(scanner.next());
+//        int count=T;
+//        while(T>0){
+//            if(T!=count){
+//                System.out.println();
+//            }
+         //   String input = scanner.next();
+            findPermutations("abc","");
+            //Collections.sort(list);
             for(int i=0;i<list.size();i++){
-                System.out.print(list.get(i)+" ");
+               // System.out.print(list.get(i)+" ");
             }
             list.clear();
-            T--;
+        //    T--;
         }
     }
-}
+

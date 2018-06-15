@@ -23,16 +23,37 @@ public class IncrementVector {
         }
     }
 
+    static int[] check(int []digits){
+       for(int i=digits.length-1;i>=0;i--){
+           if(digits[i]<9){
+               digits[i]++;
+               return digits;
+           }
+           else{
+               digits[i]=0;
+           }
+       }
+       digits=new int[digits.length+1];
+        digits[0]=1;
+        return digits;
+    }
+
+
     public static void main(String[] args) {
         Vector<Integer>v=new Vector<Integer>();
         v.add(9);
         v.add(9);
         v.add(9);
         v.add(9);
-        adding(v);
-
-        for(int j=0;j<v.size();j++){
-            System.out.println(v.get(j));
+       // adding(v);
+        int[]b={1,9,9};
+        int[]c=check(b);
+        for(int m:c){
+            System.out.println(m);
         }
+
+//        for(int j=0;j<v.size();j++){
+//            System.out.println(v.get(j));
+//        }
     }
 }
