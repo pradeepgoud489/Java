@@ -48,7 +48,7 @@ public class PrimeNumber {
         return true;
     }
     public static void main(String[] args) {
-     //  prime(15);
+      prime(15);
                     primeNumbers(15);
 //        System.out.println(prime2(10));
 //        System.out.println(prime3(23));
